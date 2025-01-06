@@ -158,19 +158,42 @@ This tutorial outlines the implementation of on-premises Active Directory within
     - Note: The script creates 10,000 users but can be edited for less. Remove one zero and it's more manageable. Also take note of the user assigned password at the top of the script.
     - The script relies on the _EMPLOYEES folder so ensure it was named correctly.
   - Save the script as "creat-users" to desktop then click the "Run Script" button in Powershell ISE
-
+- In ADUC, check the _EMPLOYEES folder for the generated users
+- Choose a random account and login to Client-1 with it
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
+<br />
+<h3>Group Policy and Managing Accounts</h3>
+
+- Login to DC-1 as jane_admin
+- Open the Group Policy Manager
+  - Start>Search>gpmc.msc
+  - Expand mydomain.com
+    - Expand the Group Policy Objects folder
+      - Right click Default Domain Policy and choose Edit to open the Group Policy Management Editor (GPME)
+        - Configure the Account Lockout Policy by double clicking
+          - Check the box "Define this policy setting"
+          - Set duration to 30 minutes and click Apply>Ok
+            - Suggested value changes will popup for other attributes including threshold for invalid logins and reset lockout timer
+              - Accept these values or set custom ones.
+- The new policy will propagate on its own but can be forced so as not to wait
+  - Open Powershell and type gpupdate /force and hit enter
+  - Verify the update by closing an reopening gpmc.msc and checking the Default Domain Policy settings
+- Pick a random user and attempt to login to Client-1 6 times to trigger the new policy
+  - Note the message at the 6th bad attempt
+- Right click on the user's name in AD
+  - Go to the Account Tab and note that the account is lock
+  - Check the unlock box and login to Client-1 with the correct password
+  - Logout of Client-1
+  - Right click>Disable the same account in AD
+  - Attempt to login (note the error message for a disabled account)
+  - Reenable tha account in AD and verify that you can successfully login
 
 <p>
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <br />
-
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
 
 <p>
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
