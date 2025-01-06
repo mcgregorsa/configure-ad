@@ -103,9 +103,9 @@ This tutorial outlines the implementation of on-premises Active Directory within
           - After restart and relogin, go to Start>User>Change Settings
             - Verify mydomain\username as login
 - Create Domain Admin User in DC-1
-  - Go to Start>Active Directory Users and Computers
+  - Go to Start>Active Directory Users and Computers (ADUC)
     - Right Click mydomain.com
-      - From the flyout select New>Orgainizational Unit
+      - From the flyout select New>Orgainizational Unit (OU)
         - Name: _EMPLOYEES (Do not forget the underscore)
         - Repeat and add a second named: _ADMINS
           - Right click _ADMINS>New>User
@@ -116,12 +116,12 @@ This tutorial outlines the implementation of on-premises Active Directory within
             - Click "Finish"
             - Right click Jane Doe>Properties
               - On the "Member Of" Tab click "Add"
-                - Type "domain admins" in the object name field.
-                  - Click the "Check Names" button to find the established group.
-                    - Click Ok>Apply>Ok
-                      - The account is now elevated to Domain Admin.
-                        - RDP to DC-1 with the new credentials to test.
-                          - Format will be: mydomain\jane_admin
+              - Type "domain admins" in the object name field.
+              - Click the "Check Names" button to find the established group.
+              - Click Ok>Apply>Ok
+              - The account is now elevated to Domain Admin.
+                - RDP to DC-1 with the new credentials to test.
+                  - Format will be: mydomain\jane_admin
 - Join Client-1 to domain
   - RDP to Client-1 with credentials created in Azure
     - Right click Start>System
@@ -129,7 +129,13 @@ This tutorial outlines the implementation of on-premises Active Directory within
         - Click Change under Computer Name Tab.
           -  Check the Domain checkbox and type "mydomain.com" in the formfield.
           -  Click then restart the VM in Azure.
+-  In DC-1 open the ADUC
+  - Expand mydomain.com
+  - Select computers and verify client-1 is there.
+  - Create new OU named _CLIENTS
+  - Drag Client-1 from Computers to _CLIENTS
 
+     
 <p>
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
