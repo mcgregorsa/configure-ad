@@ -134,12 +134,30 @@ This tutorial outlines the implementation of on-premises Active Directory within
   - Select computers and verify client-1 is there.
   - Create new OU named _CLIENTS
   - Drag Client-1 from Computers to _CLIENTS
-
-     
+- Setup RDP for non-admin users in Client-1
+  - Login to Client-1 as jane_admin
+  - Right click Start>Sysytem>RDP (on right side)
+  - Under User Acoounts click "Select users that can remotely access this PC"
+  - Click Add in the new window and type "domain users" in the textfield.
+  - Check name and click ok twice.
+  - Non-admin users can now login to client-1
+    - Note: Normally, this is done with group policy which allows multiple systems to be configured at once.
+       
 <p>
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <br />
+<h3>Creating Users with a Script</h3>
+
+- In DC-1 login as jane_admin
+- Open Powershell ISE as an administrator.
+- Go to the [script link](https://github.com/joshmadakor1/AD_PS/blob/master/Generate-Names-Create-Users.ps1)
+  - Click copy raw file
+- In Powershell ISE click File>New
+  - Paste the copied raw file into the new window in Powershell
+    - Note: The script creates 10,000 users but can be edited for less. Remove one zero and it's more manageable. Also take note of the user assigned password at the top of the script.
+    - The script relies on the _EMPLOYEES folder so ensure it was named correctly.
+  - Save the script as "creat-users" to desktop then click the "Run Script" button in Powershell ISE
 
 <p>
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
