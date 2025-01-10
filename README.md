@@ -133,18 +133,30 @@ This tutorial outlines the implementation of on-premises Active Directory within
       - Click Next and then Next again until confirmation
         - Check "Restart if required"
         - Click "Yes" on popup then click Install
-    - Click the notification at the top of the Server Manager Dashboard
-      - Click "Promote Server to Domain Controller"
-        - In the Wizard that comes up
-          - Click "Add New Forest"
-            - Enter: mydomain.com
-          - When prompted, create a password. This won't be used but is required. Keep it simple and make a note, just in case.
-          - Click Next and uncheck the DNS Delegation box then click Next again
-          - Click Next for the Prerequisites Check
-          - Click Install when the check is finished (Install button no longer grayed out)
-          - After installation the VM will restart and you will have to relogin
-          - After restart and relogin, go to Start>User>Change Settings
-            - Verify mydomain\username as login
+
+<p>
+<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<br />
+
+- Click the notification at the top of the Server Manager Dashboard
+    - Click "Promote Server to Domain Controller"
+      - In the Wizard that comes up
+        - Click "Add New Forest"
+          - Enter: mydomain.com
+    - When prompted, create a password. This won't be used but is required. Keep it simple and make a note, just in case.
+      - Click Next and uncheck the DNS Delegation box then click Next again
+      - Click Next for the Prerequisites Check
+      - Click Install when the check is finished (Install button no longer grayed out)
+      - After installation the VM will restart and you will have to relogin
+      - After restart and relogin, go to Start>User>Change Settings
+        - Verify mydomain\username as login
+
+<p>
+<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<br />
+
 - Create Domain Admin User in DC-1
   - Go to Start>Active Directory Users and Computers (ADUC)
     - Right Click mydomain.com
@@ -165,6 +177,12 @@ This tutorial outlines the implementation of on-premises Active Directory within
               - The account is now elevated to Domain Admin.
                 - RDP to DC-1 with the new credentials to test.
                   - Format will be: mydomain\jane_admin
+
+<p>
+<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<br />
+
 - Join Client-1 to domain
   - RDP to Client-1 with credentials created in Azure
     - Right click Start>System
@@ -190,7 +208,8 @@ This tutorial outlines the implementation of on-premises Active Directory within
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <br />
-<h3>Creating Users with a Script</h3>
+
+### <h3>Creating Users with a Script</h3>
 
 - In DC-1 login as jane_admin
 - Open Powershell ISE as an administrator.
