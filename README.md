@@ -2,39 +2,50 @@
 <img src="https://i.imgur.com/pU5A58S.png" alt="Microsoft Active Directory Logo"/>
 </p>
 
-<h1>On-premises Active Directory Deployed in the Cloud (Azure)</h1>
+# <h1>On-premises Active Directory Deployed in the Cloud (Azure)</h1>
 This tutorial outlines the implementation of on-premises Active Directory within Azure Virtual Machines.<br />
 
 
 
-<h2>Environments and Technologies Used</h2>
+## <h2>Environments and Technologies Used</h2>
 
 - Microsoft Azure (Virtual Machines/Compute)
 - Remote Desktop
 - Active Directory Domain Services
 - PowerShell
 
-<h2>Operating Systems Used </h2>
+## <h2>Operating Systems Used </h2>
 
 - Windows Server 2022
 - Windows 10 (21H2)
 
-<h2>High-Level Deployment and Configuration Steps</h2>
+## <h2>High-Level Deployment and Configuration Steps</h2>
 
-- Step 1
-- Step 2
-- Step 3
-- Step 4
+- Setup environment in Azure
+- Deply Active Directory
 
-<h2>Deployment and Configuration Steps</h2>
-<h3>Setting Up the Environment in MS Azure</h3>
+## <h2>Deployment and Configuration Steps</h2>
+
+###<h3>Setting Up the Environment in MS Azure</h3>
 
 - Create a Resource Group (RG) called AD-Lab5
   - Click Review+Create then Create
+
+<p>
+<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<br />
+
 - Create a Virtual Network and Subnet
   - Go to All Services>Virtual Networks
     - Name: AD-Vnet
   - Click Review+Create then Create
+
+<p>
+<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<br />
+
 - Create Domain Controller VM
   - Go to Vitrual Machines
     - Create a VM named DC-1
@@ -45,6 +56,12 @@ This tutorial outlines the implementation of on-premises Active Directory within
       - Click Next>Disk>Next>Networking
         - Select Virtual Network = AD-Vnet
         - Click Review+Create then Create
+
+<p>
+<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<br />
+
 - Create a Client VM named Client-1
   - Assign it to the RG AD-Lab5 and ensure it is in the same region
   - Select the image as Win10 Pro
@@ -52,32 +69,58 @@ This tutorial outlines the implementation of on-premises Active Directory within
   - Click Next>Disk>Next>Networking
     - Select Virtual Network = AD-Vnet
     - Click Review+Create then Create
+
+<p>
+<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<br />
+
 - Set DC-1's private IP to static
   - Go to DC-1>Network Settings
     - Click Network Interface/IPconfig
       - Set to Static then Save
+
+<p>
+<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<br />
+
 - Disable DC-1's firewall (For connectivity testing in the lab environment only)
   - Login to DC-1 with Remote Desktop (RDP)
     - In Windows Search type: wf.msc
     - Click Windows Defender Firewall Properties
     - Set the Domain, Provate, and Public Profiles to Off
     - Click Apply and Ok
+
+<p>
+<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<br />
+
 - Set Client-1 DNS to DC-1's private IP
   - Get the DC-1 Private IP from Azure
     - Go to Client-1>Network Settings>DNS Servers in Azure
       - Check the Custom box and type or paste the private IP then click Save
   - Still in Azure, go to Virtual Machines
     - Select Client-1 and Restart
+
+<p>
+<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<br />
+
   - RDP to Client-1
     - Open Powershell and ping DC-1' private IP
     - Observe ping results
     - Run ipcofig /all in powershell
       - Note the DNs Server IP under ethernet adapter ethernet
+
 <p>
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <br />
-<h3>Deploying Active Directory (AD)</h3>
+
+### <h3>Deploying Active Directory (AD)</h3>
 
 - RDP to DC-1
   - Start Menu>Server Manager
