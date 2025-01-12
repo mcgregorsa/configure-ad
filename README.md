@@ -135,7 +135,7 @@ This tutorial outlines the implementation of on-premises Active Directory within
         - Click "Yes" on popup then click Install
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://github.com/user-attachments/assets/ccba3c4a-fb5d-4a36-8485-fc6b634f2b2c" height="80%" width="80%" alt="Add Roles and Features"/>
 </p>
 <br />
 
@@ -153,7 +153,7 @@ This tutorial outlines the implementation of on-premises Active Directory within
         - Verify mydomain\username as login
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://github.com/user-attachments/assets/5458fbe3-bc20-4595-b411-b37b6da2332d" height="80%" width="80%" alt="Promote DC-1 and Add Forest"/>
 </p>
 <br />
 
@@ -179,7 +179,7 @@ This tutorial outlines the implementation of on-premises Active Directory within
                   - Format will be: mydomain\jane_admin
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://github.com/user-attachments/assets/00678938-84e6-4f65-b384-618f2dd51766" height="80%" width="80%" alt="Create Orgainizational Units and Admin User"/>
 </p>
 <br />
 
@@ -205,7 +205,7 @@ This tutorial outlines the implementation of on-premises Active Directory within
     - Note: Normally, this is done with group policy which allows multiple systems to be configured at once.
        
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://github.com/user-attachments/assets/4b3bf0a9-82da-4ff2-9c29-403ce6da9720" height="80%" width="80%" alt="Join Client-1 to mydomain.com"/>
 </p>
 <br />
 
