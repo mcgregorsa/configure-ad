@@ -32,7 +32,7 @@ This tutorial outlines the implementation of on-premises Active Directory within
   - Click Review+Create then Create
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://github.com/user-attachments/assets/d37a2da1-15e5-4edf-9bdf-d2637eef7b99" height="80%" width="80%" alt="Create Resource Group in Azure"/>
 </p>
 <br />
 
@@ -42,7 +42,7 @@ This tutorial outlines the implementation of on-premises Active Directory within
   - Click Review+Create then Create
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://github.com/user-attachments/assets/e01ce1bc-5c48-42a4-b73b-f1a7e5d1c275" height="80%" width="80%" alt="Create Virtual Network and Subnet"/>
 </p>
 <br />
 
@@ -58,7 +58,7 @@ This tutorial outlines the implementation of on-premises Active Directory within
         - Click Review+Create then Create
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://github.com/user-attachments/assets/40f7116b-3a93-4907-962e-a7a3438b410b" height="80%" width="80%" alt="Create Domain Controller VM"/>
 </p>
 <br />
 
@@ -71,7 +71,7 @@ This tutorial outlines the implementation of on-premises Active Directory within
     - Click Review+Create then Create
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://github.com/user-attachments/assets/88a1bb09-316c-4fec-bc74-4e07eefe3cdb" height="80%" width="80%" alt="Create Client VM"/>
 </p>
 <br />
 
@@ -81,7 +81,7 @@ This tutorial outlines the implementation of on-premises Active Directory within
       - Set to Static then Save
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://github.com/user-attachments/assets/b8ed51cb-3247-4f4d-b41f-75893764dd99" height="80%" width="80%" alt="Set DC-1's Privet IP to Static"/>
 </p>
 <br />
 
@@ -93,7 +93,7 @@ This tutorial outlines the implementation of on-premises Active Directory within
     - Click Apply and Ok
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://github.com/user-attachments/assets/7a678fe4-ee0d-41f0-86f0-cd24ba845493" height="80%" width="80%" alt="Disable Domain Controller Firewall"/>
 </p>
 <br />
 
@@ -105,7 +105,7 @@ This tutorial outlines the implementation of on-premises Active Directory within
     - Select Client-1 and Restart
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://github.com/user-attachments/assets/c98e97fd-11f6-47a0-b2f8-8720b6a4dd70" height="80%" width="80%" alt="Set Client-1 DNS to DC-1 Private IP"/>
 </p>
 <br />
 
@@ -116,7 +116,7 @@ This tutorial outlines the implementation of on-premises Active Directory within
       - Note the DNs Server IP under ethernet adapter ethernet
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://github.com/user-attachments/assets/713ff8ac-1ef0-4a58-839c-7db4c56e1b1e" height="80%" width="80%" alt="Client Ping and IPConfig Results"/>
 </p>
 <br />
 
