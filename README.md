@@ -222,7 +222,7 @@ This tutorial outlines the implementation of on-premises Active Directory within
   - Save the script as "create-users" to desktop then click the "Run Script" button in Powershell ISE
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://github.com/user-attachments/assets/ef148d81-f63c-4cd9-af84-ab2638f93bff" height="80%" width="80%" alt="Create Users with Script"/>
 </p>
 <br />
 
@@ -230,7 +230,7 @@ This tutorial outlines the implementation of on-premises Active Directory within
 - Choose a random account and login to Client-1 with it
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://github.com/user-attachments/assets/48e2b3d5-e996-4d0c-bd40-4c15dc0fac4b" height="80%" width="80%" alt="Script Created Account Login"/>
 </p>
 <br />
 
