@@ -249,7 +249,7 @@ This tutorial outlines the implementation of on-premises Active Directory within
               - Accept these values or set custom ones.
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://github.com/user-attachments/assets/0abf2ae6-5486-4f50-9d91-5fb61e3acda5" height="80%" width="80%" alt="Edit Lockout Policy in GPMC"/>
 </p>
 <br />
 
@@ -258,7 +258,7 @@ This tutorial outlines the implementation of on-premises Active Directory within
   - Verify the update by closing an reopening gpmc.msc and checking the Default Domain Policy settings
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://github.com/user-attachments/assets/bf5405fa-ac42-489c-b1ae-cb7af324add2" height="80%" width="80%" alt="Force Policy Update in CLI"/>
 </p>
 <br />
 
@@ -266,7 +266,7 @@ This tutorial outlines the implementation of on-premises Active Directory within
   - Note the message at the 6th bad attempt
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://github.com/user-attachments/assets/44763ad0-4809-4fd0-aa86-0deafd88ddb9" height="80%" width="80%" alt="Random User Bad Login Max Attempts Lockout Message"/>
 </p>
 <br />
 
@@ -275,7 +275,7 @@ This tutorial outlines the implementation of on-premises Active Directory within
   - Check the unlock box and login to Client-1 with the correct password
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://github.com/user-attachments/assets/9105e9e4-9e6a-4bd7-a46b-1158ec3a154e" height="80%" width="80%" alt="Locked Account in ADUC Properties"/>
 </p>
 <br />
 
@@ -283,20 +283,20 @@ This tutorial outlines the implementation of on-premises Active Directory within
 - Right click>Disable the same account in AD
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://github.com/user-attachments/assets/c07857d4-4ccb-415a-854b-8b4f6ffd4807" height="80%" width="80%" alt="ADUC Account Disabled"/>
 </p>
 <br />
 
 - Attempt to login (note the error message for a disabled account)
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://github.com/user-attachments/assets/1a142f58-d4db-4fcd-8510-fff5249684d6" height="80%" width="80%" alt="Account Disabled Error Message"/>
 </p>
 <br />
 
 - Reenable tha account in AD and verify that you can successfully login
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://github.com/user-attachments/assets/0cbd67d3-2f7b-4538-b4d1-0c265543f45c" height="80%" width="80%" alt="Successful Login"/>
 </p>
 <br />
