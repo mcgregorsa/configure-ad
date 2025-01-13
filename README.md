@@ -26,7 +26,7 @@ This tutorial outlines the implementation of on-premises Active Directory within
 
 ## <h2>Deployment and Configuration Steps</h2>
 
-###<h3>Setting Up the Environment in MS Azure</h3>
+### <h3>Setting Up the Environment in MS Azure</h3>
 
 - Create a Resource Group (RG) called AD-Lab5
   - Click Review+Create then Create
